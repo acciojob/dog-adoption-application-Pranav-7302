@@ -4,12 +4,121 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+	<title>Dog Adoption Application</title>
+	<style>
+		/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Centering the form */
+.body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+/* Form styling */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 360px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.checkbox-container {
+	display: flex;
+	align-items: center;
+	margin: auto;
+}
+label[for="dog"] {
+	margin-left: 10px;
+}
+
+
+/* Input fields styling */
+input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Multi-select box */
+#multiSelect {
+    height: 40px; /* To show at least 3 options */
+}
+
+/* Checkbox alignment */
+input[type="checkbox"] {
+    margin-left: 5px;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #218838;
+}
+	</style>
+
 </head>
 
-<body>
+<body class="body">
+	<form action="">
+		<label for="name">Name:</label>
+		<input type="text" name="" id="name" placeholder="Name">
+	
+		<label for="phone">Phone Number</label>
+		<input type="text" id="phone" placeholder="Phone Number">
+		<label for="address">Address</label>
+		<input type="text" id="address" placeholder="Address">
+		
+		<div class="checkbox-container">
+			<input type="checkbox" name="dog" id="dog">
+			<label for="dog">Have you ever lived with a Dog before?</label>
+		</div>
+		
+
+		<label for="breeds">Please select your preferred breeds:</label>
+		<select name="breeds" id="multiSelect">
+			<option value="labrador">Labrador</option>
+			<option value="german_shepherd">German Shepherd</option>
+			<option value="golden_retriever">Golden Retriever</option>
+			<option value="bulldog">Bulldog</option>
+			<option value="poodle">Poodle</option>
+		</select>
+
+	
+		<input type="submit" value="Submit">
+	</form>
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+	<script type="text/javascript" src="./script.js">
+	</script>
 
 </body>
 
